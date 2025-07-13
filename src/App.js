@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import ClickEventHandler from './components/ClickEventHandler';
+import Counter from './components/Counter';
+import DemoComponent from './components/DemoComponents';
+import EmployeeList from './components/EmployeeList';
+import FormInput from './components/FormInput';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DemoComponent name="santhosh" country="india"></DemoComponent>
+      <ClickEventHandler></ClickEventHandler>
+      <EmployeeList></EmployeeList>
+      <FormInput></FormInput>
+      <Counter></Counter>
     </div>
   );
 }
