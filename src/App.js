@@ -1,19 +1,22 @@
-import ClickEventHandler from './components/ClickEventHandler';
-import Counter from './components/Counter';
-import DemoComponent from './components/DemoComponents';
-import EmployeeList from './components/EmployeeList';
-import FormInput from './components/FormInput';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RegisterComponent from './components/RegisterComponent';
+import LoginComponent from './components/LoginComponent';
+import DashboardComponent from './components/DashboardComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <DemoComponent name="santhosh" country="india"></DemoComponent>
-      <ClickEventHandler></ClickEventHandler>
-      <EmployeeList></EmployeeList>
-      <FormInput></FormInput>
-      <Counter></Counter>
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<LoginComponent />} />
+          <Route path="/register" element={<RegisterComponent />} />
+          <Route path="/login" element={<LoginComponent />} />
+          <Route path="/dashboard" element={<DashboardComponent />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
